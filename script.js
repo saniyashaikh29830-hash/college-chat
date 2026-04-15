@@ -6,13 +6,13 @@ function sendMessage(){
     let chat=document.getElementById("chat");
 
     let u=document.createElement("div");
-    u.className="message user";
+    u.className="message user animate-message";
     u.innerHTML=`<span>${msg}</span><img src="assets/user.png" class="avatar">`;
     chat.appendChild(u);
 
     // Show typing indicator
     let t=document.createElement("div");
-    t.className="message bot";
+    t.className="message bot animate-message";
     t.innerHTML=`<img src="assets/logo.png" class="avatar"><span class="typing"><div class="dot"></div><div class="dot"></div><div class="dot"></div></span>`;
     chat.appendChild(t);
     chat.scrollTop=chat.scrollHeight;
@@ -26,7 +26,7 @@ function sendMessage(){
         t.remove(); // Remove indicator
 
         let b=document.createElement("div");
-        b.className="message bot";
+        b.className="message bot animate-message";
         b.innerHTML=`<img src="assets/logo.png" class="avatar"><span>${data}</span>`;
         chat.appendChild(b);
 
