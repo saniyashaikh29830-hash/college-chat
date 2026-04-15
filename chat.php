@@ -1,6 +1,6 @@
 <?php
 
-$conn = mysqli_connect("localhost","root","","college_chat");
+$conn = mysqli_connect("localhost","root","12345@","college_chat");
 
 if(!$conn){
     die("Database error");
