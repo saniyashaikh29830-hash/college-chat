@@ -9,6 +9,18 @@ if(!$conn){
 $msg = strtolower(trim($_POST['message']));
 $key = "";
 
+/* ================== GREETINGS & HELP ================== */
+
+if(preg_match("/\b(hi|hello|hey|hola|greetings)\b/", $msg)){
+    echo "Hello! I am your College Assistant. How can I help you today? You can ask me about courses, fees, admissions, and more!";
+    exit;
+}
+
+if(strpos($msg,"help")!==false || strpos($msg,"what can you do")!==false){
+    echo "I can help you with information regarding: Admissions, Fees, Courses, Faculty, Facilities (Library, Canteen, Gym), and Campus locations. What would you like to know?";
+    exit;
+}
+
 /* ================== KEYWORD MATCHING ================== */
 
 if(strpos($msg,"name")!==false || strpos($msg,"college name")!==false){
@@ -139,7 +151,7 @@ elseif(strpos($msg,"club")!==false){
 /* ================== DEFAULT ================== */
 
 else{
-    echo "Please ask valid college related question.";
+    echo "I'm sorry, I didn't quite catch that. Try asking about **admissions, fees, courses, or timings!**";
     exit;
 }
 
