@@ -2,6 +2,9 @@
 <html>
 <head>
     <title>College AI Assistant</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -12,7 +15,10 @@
     <!-- HEADER -->
     <div class="top">
         <h2>College AI Assistant</h2>
-        <p>Bunts Sangha College</p>
+        <div class="status-container">
+            <span class="status-dot"></span>
+            <p>Bunts Sangha College - Online</p>
+        </div>
     </div>
 
     <!-- CHAT AREA -->
@@ -23,10 +29,15 @@
         <input 
             type="text" 
             id="msg" 
-            placeholder="Ask about college (e.g., courses, library, fees...)"
+            placeholder="Ask about courses, library, fees..."
             autocomplete="off"
         >
-        <button onclick="sendMessage()">Send</button>
+        <button onclick="sendMessage()" id="sendBtn">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="22" y1="2" x2="11" y2="13"></line>
+                <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+            </svg>
+        </button>
     </div>
 
 </div>
