@@ -1,0 +1,80 @@
+:root {
+    --bg: linear-gradient(135deg,#e0eafc,#cfdef3);
+    --header: #b8c6db;
+    --user: #c7f0db;
+    --bot: #e3e8ef;
+}
+
+/* rest auto adjust hoga */
+
+body {
+    margin:0;
+    font-family:'Segoe UI';
+    background: var(--bg);
+}
+
+.app {
+    width:420px;
+    height:600px;
+    margin:40px auto;
+    background:white;
+    border-radius:15px;
+    display:flex;
+    flex-direction:column;
+    overflow:hidden;
+}
+
+.top {
+    background: var(--header);
+    text-align:center;
+    padding:15px;
+}
+
+#chat {
+    flex:1;
+    padding:15px;
+    overflow-y:auto;
+    display:flex;
+    flex-direction:column;
+}
+
+/* NO OVERLAP FIX */
+.message {
+    display:flex;
+    margin:6px 0;
+}
+
+.user { justify-content:flex-end; }
+.bot { justify-content:flex-start; }
+
+.user span {
+    background: var(--user);
+    padding:10px;
+    border-radius:12px;
+    max-width:70%;
+    word-wrap:break-word;
+}
+
+.bot span {
+    background: var(--bot);
+    padding:10px;
+    border-radius:12px;
+    max-width:70%;
+}
+
+.input-area {
+    display:flex;
+    border-top:1px solid #ccc;
+}
+
+input {
+    flex:1;
+    padding:12px;
+    border:none;
+}
+
+button {
+    padding:12px;
+    background: var(--header);
+    border:none;
+}
