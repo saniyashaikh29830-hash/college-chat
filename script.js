@@ -7,7 +7,7 @@ function sendMessage(){
 
     let u=document.createElement("div");
     u.className="message user";
-    u.innerHTML=`<span>${msg}</span>`;
+    u.innerHTML=`<span>${msg}</span><img src="assets/user.png" class="avatar">`;
     chat.appendChild(u);
 
     fetch("chat.php",{
@@ -18,7 +18,7 @@ function sendMessage(){
     .then(data=>{
         let b=document.createElement("div");
         b.className="message bot";
-        b.innerHTML=`<span>${data}</span>`;
+        b.innerHTML=`<img src="assets/logo.png" class="avatar"><span>${data}</span>`;
         chat.appendChild(b);
 
         chat.scrollTop=chat.scrollHeight;

@@ -36,21 +36,38 @@ body {
     overflow-y:auto;
     display:flex;
     flex-direction:column;
+    gap: 12px;
 }
 
-/* NO OVERLAP FIX */
+/* AVATARS */
+.avatar {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    object-fit: cover;
+    background: white;
+    border: 1px solid #ddd;
+}
+
 .message {
-    display:flex;
-    margin:6px 0;
+    display: flex;
+    align-items: flex-end;
 }
 
-.user { justify-content:flex-end; }
-.bot { justify-content:flex-start; }
+.user { 
+    justify-content: flex-end; 
+    gap: 10px;
+}
+
+.bot { 
+    justify-content: flex-start; 
+    gap: 10px;
+}
 
 .user span {
     background: var(--user);
     padding:10px;
-    border-radius:12px;
+    border-radius: 12px 12px 0 12px;
     max-width:70%;
     word-wrap:break-word;
 }
@@ -58,7 +75,7 @@ body {
 .bot span {
     background: var(--bot);
     padding:10px;
-    border-radius:12px;
+    border-radius: 12px 12px 12px 0;
     max-width:70%;
 }
 
