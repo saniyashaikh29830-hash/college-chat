@@ -5,7 +5,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css?v=2">
 </head>
 
 <body>
@@ -22,7 +22,22 @@
     </div>
 
     <!-- CHAT AREA -->
-    <div id="chat"></div>
+    <div id="chat">
+        <div class="welcome-screen" id="welcomeScreen">
+            <div class="welcome-content">
+                <img src="assets/welcome_icon.png" alt="Mascot" class="welcome-mascot">
+                <h1>How can I help you today?</h1>
+                <p>I'm your AI assistant for Bunts Sangha College. Ask me anything or try these:</p>
+                
+                <div class="chip-container">
+                    <button class="chip" onclick="quickAction('BCA Course Details')">BCA Course</button>
+                    <button class="chip" onclick="quickAction('Admission Process')">Admissions</button>
+                    <button class="chip" onclick="quickAction('Library timings')">Library</button>
+                    <button class="chip" onclick="quickAction('College Location')">Location</button>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- INPUT AREA -->
     <div class="input-area">

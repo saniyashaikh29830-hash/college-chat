@@ -3,6 +3,10 @@ function sendMessage(){
     let msg=input.value.trim();
     if(msg==="") return;
 
+    // Hide welcome screen on first message
+    let welcome = document.getElementById("welcomeScreen");
+    if (welcome) welcome.classList.add('hidden');
+
     let chat=document.getElementById("chat");
 
     let u=document.createElement("div");
@@ -41,3 +45,7 @@ document.getElementById("msg").addEventListener("keydown",function(e){
         sendMessage();
     }
 });
+function quickAction(text) {
+    document.getElementById("msg").value = text;
+    sendMessage();
+}
