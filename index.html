@@ -7,6 +7,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet" />
     <link rel="stylesheet" href="style.css?v=3">
 </head>
 
@@ -16,7 +17,7 @@
 
     <!-- HEADER -->
     <header class="landing-header">
-        <img src="assets/logo.png" alt="College Logo" class="logo">
+        <img src="assets/logo.svg" alt="College Logo" class="logo">
         <h1>College AI Assistant</h1>
         <p>Your intelligent companion for all college inquiries</p>
     </header>
@@ -26,43 +27,8 @@
         <div class="hero-content">
             <h2>Get Instant Answers to Your College Questions</h2>
             <p>Ask about courses, fees, library resources, admissions, and more. Our AI assistant is here to help you navigate your college journey.</p>
-            <a href="chat.html" class="cta-button">Start Chatting</a>
+            <a href="chat.html" class="cta-button"><i class="ri-chat-smile-3-line"></i> Start Chatting</a>
         </div>
-    </div>
-
-    <!-- CHAT AREA -->
-    <div id="chat">
-        <div class="welcome-screen" id="welcomeScreen">
-            <div class="welcome-content">
-                <img src="assets/welcome_icon.png" alt="Mascot" class="welcome-mascot">
-                <h1>How can I help you today?</h1>
-                <p>I'm your AI assistant for Bunts Sangha College. Ask me anything or try these:</p>
-                
-                <div class="chip-container">
-                    <button class="chip" onclick="quickAction('BCA Course Details')">BCA Course</button>
-                    <button class="chip" onclick="quickAction('Admission Process')">Admissions</button>
-                    <button class="chip" onclick="quickAction('Library timings')">Library</button>
-                    <button class="chip" onclick="quickAction('College Location')">Location</button>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- INPUT AREA -->
-    <div class="input-area">
-        <input 
-            type="text" 
-            id="msg" 
-            placeholder="Ask about courses, library, fees..."
-            autocomplete="off"
-        >
-        <button onclick="sendMessage()" id="sendBtn">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <line x1="22" y1="2" x2="11" y2="13"></line>
-                <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
-            </svg>
-        </button>
-    </div>
         <div class="hero-image">
             <img src="assets/user.png" alt="Student chatting" class="hero-img">
         </div>
@@ -71,18 +37,22 @@
     <!-- FEATURES -->
     <section class="features">
         <div class="feature">
+            <div class="feature-icon"><i class="ri-book-open-line"></i></div>
             <h3>Course Information</h3>
             <p>Get details about available courses, prerequisites, and schedules.</p>
         </div>
         <div class="feature">
+            <div class="feature-icon"><i class="ri-money-rupee-circle-line"></i></div>
             <h3>Fee Structure</h3>
             <p>Understand tuition fees, scholarships, and payment options.</p>
         </div>
         <div class="feature">
+            <div class="feature-icon"><i class="ri-book-read-line"></i></div>
             <h3>Library Resources</h3>
             <p>Find books, journals, and digital resources available in our library.</p>
         </div>
         <div class="feature">
+            <div class="feature-icon"><i class="ri-graduation-cap-line"></i></div>
             <h3>Admissions Help</h3>
             <p>Get guidance on admission procedures and requirements.</p>
         </div>

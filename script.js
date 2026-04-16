@@ -17,7 +17,7 @@ function sendMessage(){
     // Show typing indicator
     let t=document.createElement("div");
     t.className="message bot animate-message";
-    t.innerHTML=`<img src="assets/logo.png" class="avatar"><span class="typing"><div class="dot"></div><div class="dot"></div><div class="dot"></div></span>`;
+    t.innerHTML=`<img src="assets/logo.svg" class="avatar"><span class="typing"><div class="dot"></div><div class="dot"></div><div class="dot"></div></span>`;
     chat.appendChild(t);
     chat.scrollTop=chat.scrollHeight;
 
@@ -31,7 +31,7 @@ function sendMessage(){
 
         let b=document.createElement("div");
         b.className="message bot animate-message";
-        b.innerHTML=`<img src="assets/logo.png" class="avatar"><span>${data}</span>`;
+        b.innerHTML=`<img src="assets/logo.svg" class="avatar"><span>${data}</span>`;
         chat.appendChild(b);
 
         chat.scrollTop=chat.scrollHeight;
