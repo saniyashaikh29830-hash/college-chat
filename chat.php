@@ -12,7 +12,7 @@ $key = "";
 /* ================== GREETINGS & HELP ================== */
 
 if(preg_match("/\b(hi|hello|hey|hola|greetings|yo)\b/", $msg)){
-    echo "Hello! I am your College Assistant. How can I help you today? You can ask me about courses, fees, admissions, and more!";
+    echo "Hello! I am AskBunts, your College Assistant. How can I help you today? You can ask me about courses, fees, admissions, and more!";
     exit;
 }
 
@@ -22,7 +22,7 @@ if(strpos($msg,"how are you")!==false){
 }
 
 if(strpos($msg,"who are you")!==false){
-    echo "I am your College Assistant. How can I help you today? You can ask me about courses, fees, admissions, and more!";
+    echo "I am AskBunts, your College Assistant. How can I help you today? You can ask me about courses, fees, admissions, and more!";
     exit;
 }
 
