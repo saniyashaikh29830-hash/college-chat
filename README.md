@@ -1,4 +1,4 @@
-# College AI Assistant Chatbot
+# AskBunts — College AI Assistant Chatbot
 
 A simple, keyword-based chatbot for Bunts Sangha College, built with PHP and MySQL. This assistant helps students and visitors get quick answers about courses, admissions, facilities, and more.
 

@@ -1,6 +1,6 @@
 <?php
 
-$conn = mysqli_connect("localhost","root","","college_chat");
+$conn = mysqli_connect("localhost","root","12345@","college_chat");
 
 if(!$conn){
     die("Database error");
@@ -11,8 +11,18 @@ $key = "";
 
 /* ================== GREETINGS & HELP ================== */
 
-if(preg_match("/\b(hi|hello|hey|hola|greetings)\b/", $msg)){
-    echo "Hello! I am your College Assistant. How can I help you today? You can ask me about courses, fees, admissions, and more!";
+if(preg_match("/\b(hi|hello|hey|hola|greetings|yo)\b/", $msg)){
+    echo "Hello! I am AskBunts, your College Assistant. How can I help you today? You can ask me about courses, fees, admissions, and more!";
+    exit;
+}
+
+if(strpos($msg,"how are you")!==false){
+    echo "I am fine, thank you!";
+    exit;
+}
+
+if(strpos($msg,"who are you")!==false){
+    echo "I am AskBunts, your College Assistant. How can I help you today? You can ask me about courses, fees, admissions, and more!";
     exit;
 }
 
