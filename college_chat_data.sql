@@ -30,6 +30,12 @@ INSERT INTO `info` (`question`, `answer`) VALUES
 ('labs', 'There are multiple labs including computer labs and science labs for practical learning.'),
 ('computer lab', 'Computer labs are located on upper floors in the IT/Science section of the building.'),
 ('library', 'The college has a well-stocked library with books, journals, and study material, The library is located on the 6th floor.'),
+('bca duration', 'The duration of the BCA (Bachelor of Computer Applications) course is 3 years.'),
+('bca subjects', 'Some common subjects included in the BCA course are: Programming Languages (C, C++, Java, Python), Database Management System (DBMS), Web Development, Computer Networks, Operating Systems, Software Engineering, Data Structures, Mathematics, Cyber Security.'),
+('bca fees', 'The average fee for the BCA course is approximately ₹35,000 to ₹40,000 per year.'),
+('bca eligibility', 'The eligibility criteria for BCA is that the student must have passed 12th standard from a recognized board with minimum required marks.'),
+('bca coding', 'Yes, coding is taught in the BCA course. Students learn different programming languages and software development concepts.'),
+('bca languages', 'Some important programming languages for BCA students are: C, C++, Java, Python, JavaScript, SQL.'),
 ('timing', 'College runs in shifts, typically from 7:00 AM to around 5:00 PM depending on junior and degree sections.'),
 ('teachers', 'Teachers are highly qualified with postgraduate degrees (NET/SET or PhD) and are generally supportive, experienced, and focused on student development.'),
 ('staff room', 'The staff room is located inside the main academic building, usually on a faculty-designated floor.'),
@@ -54,4 +60,6 @@ INSERT INTO `info` (`question`, `answer`) VALUES
 ('medical room', 'Yes, there is a medical room/restroom on the fourth floor.'),
 ('fifth floor', 'The fifth floor includes the Administrative Office (ASJC), reception, coordinator section, store room, faculty room, Vice-Principal\'s cabin, Principal\'s cabin, classroom, exam control room, and boys\' & girls\' washrooms.'),
 ('administrative office asjc', 'The Administrative Office (ASJC) is located on the fifth floor.'),
-('sixth floor', 'The sixth floor includes the Administrative Office (UKS), classrooms, reception, conference room, library, Director\'s cabin, faculty room, counseling room, auditorium, store room, and boys\' & girls\' washrooms.');
+('sixth floor', 'The sixth floor includes the Administrative Office (UKS), classrooms, reception, conference room, library, Director\'s cabin, faculty room, counseling room, auditorium, store room, and boys\' & girls\' washrooms.'),
+('asjc', 'ASJC stands for Arts, Science and Junior College section, which is part of the Bunts Sangha campus.'),
+('uk', 'UK stands for Undergraduate College section, which is part of the Bunts Sangha campus.');

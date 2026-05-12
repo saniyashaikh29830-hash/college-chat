@@ -33,7 +33,31 @@ if(strpos($msg,"help")!==false || strpos($msg,"what can you do")!==false){
 
 /* ================== KEYWORD MATCHING ================== */
 
-if(strpos($msg,"name")!==false || strpos($msg,"college name")!==false){
+if(strpos($msg,"bca")!==false){
+    if(strpos($msg,"duration")!==false || strpos($msg,"long")!==false || strpos($msg,"year")!==false){
+        $key="bca duration";
+    }
+    elseif(strpos($msg,"subject")!==false || strpos($msg,"syllabus")!==false || strpos($msg,"study")!==false){
+        $key="bca subjects";
+    }
+    elseif(strpos($msg,"fee")!==false || strpos($msg,"cost")!==false){
+        $key="bca fees";
+    }
+    elseif(strpos($msg,"eligibility")!==false || strpos($msg,"criteria")!==false || strpos($msg,"requirement")!==false){
+        $key="bca eligibility";
+    }
+    elseif(strpos($msg,"coding")!==false || strpos($msg,"program")!==false || strpos($msg,"learn")!==false || strpos($msg,"teach")!==false){
+        $key="bca coding";
+    }
+    elseif(strpos($msg,"language")!==false){
+        $key="bca languages";
+    }
+    else {
+        $key="courses";
+    }
+}
+
+elseif(strpos($msg,"name")!==false || strpos($msg,"college name")!==false){
     $key="name";
 }
 
