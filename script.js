@@ -13,23 +13,40 @@ function sendMessage(){
     u.className="message user animate-message";
     u.innerHTML=`<span>${msg}</span><img src="assets/student.png" class="avatar">`;
     chat.appendChild(u);
+    chat.scrollTop = chat.scrollHeight;
 
-    fetch("chat.php",{
-        method:"POST",
-        body:new URLSearchParams({message:msg})
+    // Show typing indicator
+    let typing = document.createElement("div");
+    typing.className = "message bot typing-container animate-message";
+    typing.id = "typing-indicator";
+    typing.innerHTML = `<img src="assets/baymax.png" class="avatar"><div class="typing"><div class="dot"></div><div class="dot"></div><div class="dot"></div></div>`;
+    chat.appendChild(typing);
+    chat.scrollTop = chat.scrollHeight;
+
+    fetch("chat.php", {
+        method: "POST",
+        body: new URLSearchParams({ message: msg })
     })
-    .then(res=>res.text())
-    .then(data=>{
-        let b=document.createElement("div");
-        b.className="message bot animate-message";
-        b.innerHTML=`<img src="assets/baymax.png" class="avatar"><span>${data}</span>`;
-        chat.appendChild(b);
+    .then(res => res.text())
+    .then(data => {
+        // Simulate a natural delay
+        setTimeout(() => {
+            // Remove typing indicator
+            let indicator = document.getElementById("typing-indicator");
+            if (indicator) indicator.remove();
 
-        chat.scrollTop=chat.scrollHeight;
+            let b = document.createElement("div");
+            b.className = "message bot animate-message";
+            b.innerHTML = `<img src="assets/baymax.png" class="avatar"><span>${data}</span>`;
+            chat.appendChild(b);
+
+            chat.scrollTop = chat.scrollHeight;
+        }, 1000);
     });
 
-    input.value="";
+    input.value = "";
 }
+
 
 document.getElementById("msg").addEventListener("keydown",function(e){
     if(e.key==="Enter"){
