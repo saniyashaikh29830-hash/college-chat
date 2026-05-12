@@ -183,3 +183,23 @@ Computer Labs I, II, and III are located on the fourth floor.
 
 Is there a medical room on the fourth floor?
 Yes, there is a medical room/restroom on the fourth floor.
+
+BCA Course Details
+
+What is the duration of the BCA course? (Keyword - bca duration)
+The duration of the BCA (Bachelor of Computer Applications) course is 3 years.
+
+What subjects are included in BCA? (Keyword - bca subjects)
+Some common subjects included in the BCA course are: Programming Languages (C, C++, Java, Python), Database Management System (DBMS), Web Development, Computer Networks, Operating Systems, Software Engineering, Data Structures, Mathematics, Cyber Security.
+
+What is the average fee for BCA? (Keyword - bca fees)
+The average fee for the BCA course is approximately ₹35,000 to ₹40,000 per year.
+
+What is the eligibility criteria for BCA? (Keyword - bca eligibility)
+The eligibility criteria for BCA is that the student must have passed 12th standard from a recognized board with minimum required marks.
+
+Is coding taught in BCA? (Keyword - bca coding)
+Yes, coding is taught in the BCA course. Students learn different programming languages and software development concepts.
+
+Which programming languages are important for BCA students? (Keyword - bca languages)
+Some important programming languages for BCA students are: C, C++, Java, Python, JavaScript, SQL.
