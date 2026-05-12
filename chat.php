@@ -224,9 +224,39 @@ elseif(strpos($msg,"club")!==false){
     $key="clubs";
 }
 
+/* ================== FUZZY FALLBACK ================== */
+
+if($key == ""){
+    $res = mysqli_query($conn, "SELECT question FROM info");
+    $best_key = "";
+    $min_dist = 2; // Threshold for typo (1-2 characters)
+    
+    $msg_words = explode(" ", $msg);
+    
+    while($row = mysqli_fetch_assoc($res)){
+        $db_key = $row['question'];
+        $db_words = explode(" ", $db_key);
+        
+        foreach($msg_words as $m_word){
+            if(strlen($m_word) < 4) continue; // Skip short words to avoid false positives
+            
+            foreach($db_words as $d_word){
+                if(strlen($d_word) < 4) continue;
+                
+                $dist = levenshtein($m_word, $d_word);
+                if($dist <= $min_dist){
+                    $best_key = $db_key;
+                    $min_dist = $dist;
+                }
+            }
+        }
+    }
+    if($best_key != "") $key = $best_key;
+}
+
 /* ================== DEFAULT ================== */
 
-else{
+if($key == ""){
     echo "I'm sorry, I didn't quite catch that. Try asking about **admissions, fees, courses, or timings!**";
     exit;
 }
